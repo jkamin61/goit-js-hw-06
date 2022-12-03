@@ -1,5 +1,5 @@
 const loginForm = document.querySelector(".login-form");
-let arr = [];
+
 loginForm.addEventListener("submit", event => {
     event.preventDefault();
     const {
@@ -8,11 +8,11 @@ loginForm.addEventListener("submit", event => {
 if (email.value === "" || password.value === "") {
     alert("Fill all the blank inputs.")
 }
-
-arr.push(email.value);
-arr.push(password.value);
-
+const inputData = {
+    email: email.value,
+    password: password.value
+};
+console.log(inputData);
     event.currentTarget.reset();
-console.log(arr);
 });
 
